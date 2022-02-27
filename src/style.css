@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Nunito', sans-serif;
+  }
+    
+  .columns {
+    padding: .75em .75em;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .column {
+    margin: .75em;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #ccc;
+    flex-wrap: inherit;
+  }
+  
+  .column .content {
+    border-radius: 5px;
+    padding: 1em;
+  }
+  
+  .column section {
+    padding: 1.5em;    
+  }
