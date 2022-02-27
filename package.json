@@ -1,7 +1,6 @@
 {
   "name": "team-profile-generator",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "directories": {
     "lib": "lib"
@@ -14,5 +13,15 @@
   "license": "ISC",
   "dependencies": {
     "inquirer": "^8.2.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Clos86/team-profile-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Clos86/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/Clos86/team-profile-generator#readme",
+  "description": ""
 }
