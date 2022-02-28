@@ -1,10 +1,6 @@
-// const generateHTML = require('./src/page-template.js');
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const teamArray = [];
-
-// manager questions
 const addManager = () => {
     return inquirer.prompt([
       {
@@ -93,11 +89,11 @@ const addEmployee = () => {
           name: 'id',
           message: "Please enter the employee's ID.",
           validate: nameInput => {
-              if  (isNaN(nameInput)) {
-                  console.log ("Please enter the employee's ID!")
-                  return false; 
+              if  (nameInput) {                  
+                  return true; 
               } else {
-                  return true;
+                  console.log ("Please enter the employee's ID!")
+                  return false;
               }
           }
       },
@@ -120,7 +116,7 @@ const addEmployee = () => {
           message: "Please enter the employee's github username.",
           when: (input) => input.role === "Engineer",
           validate: nameInput => {
-              if (nameInput ) {
+              if (nameInput) {
                   return true;
               } else {
                   console.log ("Please enter the employee's github username!")
@@ -147,4 +143,7 @@ const addEmployee = () => {
           default: false
       }
   ])
-};
+  };
+
+addManager()
+.then(addEmployee);
