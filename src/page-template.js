@@ -128,6 +128,7 @@ const generateTeamPage = function (employeeCards) {
         <h1 class="title has-text-white">Team Profiles</h1>
         </div>
     </section>
+    <section class="columns">
     ${employeeCards}
     </section>
     </body>
