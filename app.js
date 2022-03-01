@@ -182,16 +182,27 @@ const addEmployee = () => {
         return teamArray;
     }
 })
-  };
+};
 
-  addManager()
-  .then(addEmployee)
-  .then(teamArray => {
+const writeFile = data => {
+    fs.writeFile('./dist/index.html', data, err => { 
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            console.log('Your team profile has been successfully created!')
+        }
+    })
+};
+
+addManager()
+    .then(addEmployee)
+    .then(teamArray => {
     return generateHTML(teamArray);
-  })
-  .then(pageHTML => {
+    })
+    .then(pageHTML => {
     return writeFile(pageHTML);
-  })
-  .catch(err => {
- console.log(err);
-  });
+    })
+    .catch(err => {
+    console.log(err);
+});
