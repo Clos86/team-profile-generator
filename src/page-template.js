@@ -1,4 +1,115 @@
-module.exports = templateData => {
+const generateManager = function (manager) {
+  return `
+<div class="column is-one-fourth">
+<div class="content has-background-warning is-marginless">
+  <h2 class="title">${manager.name}</h2>
+<h4 class="subtitle">
+  <span class="icon"><i class="fas fa-mug-hot"></i></span>
+  Manager</h4>
+</div>
+<section>
+  <div class="tile is-12">
+    id: ${manager.id}
+  </div> 
+  <div class="tile is-12">
+    email:&nbsp;
+    <a href="mailto:email: ${manager.email}">${manager.email}</a>
+  </div> 
+  <div class="tile is-12">
+    office number: ${manager.officeNumber}
+  </div> 
+</section>
+</div>
+`;
+};
+
+const generateEngineer = function (engineer) {
+  return `
+  \n<div class="column is-one-fourth">
+    <div class="content has-background-warning is-marginless">
+      <h2 class="title">${name}</h2>
+    <h4 class="subtitle">
+      <span class="icon"><i class="fas fa-glasses"></i></span>
+      Engineer</h4>
+    </div>
+    <section>
+      <div class="tile is-12">
+        id: ${id}
+      </div> 
+      <div class="tile is-12">
+        email:&nbsp;
+        <a href="mailto:email: ${email}">${email}</a>
+      </div> 
+      <div class="tile is-12">
+        github:&nbsp;
+        <a href="https://github.com/${github}">${github}</a>
+      </div> 
+    </section>
+  </div>
+  `;
+};
+
+const generateIntern = function (intern) {
+  return `
+  \n<div class="column is-one-fourth">
+  <div class="content has-background-warning is-marginless">
+    <h2 class="title">${name}</h2>
+  <h4 class="subtitle">
+    <span class="icon"><i class="fas fa-user-graduate"></i></span>
+    Intern</h4>
+  </div>
+  <section>
+    <div class="tile is-12">
+      id: ${id}
+    </div> 
+    <div class="tile is-12">
+      email:&nbsp;
+      <a href="mailto:email: ${email}">${email}</a>
+    </div> 
+    <div class="tile is-12">
+      school: ${school}
+    </div> 
+  </section>
+</div>
+`;
+};
+ 
+generateHTML = (data) => {
+
+  pageArray = []; 
+
+  for (let i = 0; i < data.length; i++) {
+      const employee = data[i];
+      const role = employee.getRole(); 
+
+      if (role === 'Manager') {
+          const managerCard = generateManager(employee);
+
+          pageArray.push(managerCard);
+      }
+
+      if (role === 'Engineer') {
+          const engineerCard = generateEngineer(employee);
+
+          pageArray.push(engineerCard);
+      }
+
+      if (role === 'Intern') {
+          const internCard = generateIntern(employee);
+
+          pageArray.push(internCard);
+      }
+      
+  }
+
+  const employeeCards = pageArray.join('')
+
+  const generateTeam = generateTeamPage(employeeCards); 
+  return generateTeam;
+
+}
+
+const generateTeamPage = function (employeeCards) {
     return `
     <!DOCTYPE html>
     <html>
@@ -17,9 +128,11 @@ module.exports = templateData => {
         <h1 class="title has-text-white">Team Profiles</h1>
         </div>
     </section>
-    
+    ${employeeCards}
     </section>
     </body>
     </html>
     `;
 };
+
+module.exports = generateHTML; 
