@@ -1,5 +1,13 @@
+const generateHTML = require('./src/page-template');
+
 const inquirer = require('inquirer');
 const fs = require('fs');
+
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern'); 
+
+const teamArray = []; 
 
 const addManager = () => {
     return inquirer.prompt([
@@ -44,7 +52,7 @@ const addManager = () => {
     },
     {
         type: 'input',
-        name: 'office',
+        name: 'officeNumber',
         message: "What is manager's office number?",
         validate: nameInput => {
             if (nameInput) {
@@ -56,6 +64,13 @@ const addManager = () => {
         }
     },
 ])
+.then(managerInput => {
+    const  { name, id, email, officeNumber } = managerInput; 
+    const manager = new Manager (name, id, email, officeNumber);
+
+    teamArray.push(manager); 
+    console.log(manager); 
+})
 };
 const addEmployee = () => {
   console.log(`
