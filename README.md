@@ -1,5 +1,5 @@
 # Team Profile Generator
-  ![Github licence](http://img.shields.io/badge/license-ISC-blue.svg)  
+  ![Github license](http://img.shields.io/badge/license-ISC-blue.svg)  
   ## Description 
   It is a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person.
   ## Table of Contents
@@ -13,7 +13,7 @@
   Node.js is required for the app to work.
   ## Usage 
   In the command-line you will run Node.js and answer the questions that are prompted.  
-  Download the video from the link to see how the use the app: [Video](https://drive.google.com/file/d/1an0yK4qETexuzXewTFCUvt3HujpgH5sV/view)
+  Follow the link to see how to use the app: [Video](https://drive.google.com/file/d/1an0yK4qETexuzXewTFCUvt3HujpgH5sV/view)
   
   ## License 
   This project is license under [ISC](https://choosealicense.com/licenses/ISC/)
