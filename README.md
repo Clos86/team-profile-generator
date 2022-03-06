@@ -12,7 +12,8 @@
   ## Installation 
   Node.js is required for the app to work.
   ## Usage 
-  In the command-line you will run Node.js and answer the questions that are prompted.
+  In the command-line you will run Node.js and answer the questions that are prompted.  
+  Download the video from the link to see how the use the app: [Video](https://drive.google.com/file/d/1an0yK4qETexuzXewTFCUvt3HujpgH5sV/view)
   
   ## License 
   This project is license under [ISC](https://choosealicense.com/licenses/ISC/)
