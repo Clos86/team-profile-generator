@@ -17,6 +17,6 @@
   ## License 
   This project is license under [ISC](https://choosealicense.com/licenses/ISC/)
   ## Tests
-  node index
+  node app
   ## Questions
   If you have any questions about this projects, please contact me directly at [c.vazquez1986@gmail.com](mailto:c.vazquez1986@gmail.com). You can view more of my projects at [Clos86](https://github.com/Clos86).
