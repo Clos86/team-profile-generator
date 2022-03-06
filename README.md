@@ -13,7 +13,7 @@
   Node.js is required for the app to work.
   ## Usage 
   In the command-line you will run Node.js and answer the questions that are prompted.  
-  Follow the link to see how to use the app: [Video](https://drive.google.com/file/d/1an0yK4qETexuzXewTFCUvt3HujpgH5sV/view)
+  Follow the link to see how to use the app: [Video](https://drive.google.com/file/d/1RlgbzHUEUIcQOF9SEyepS2BIZwIbyNyu/view)
   
   ## License 
   This project is license under [ISC](https://choosealicense.com/licenses/ISC/)
